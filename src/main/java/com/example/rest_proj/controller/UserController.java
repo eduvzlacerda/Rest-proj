@@ -77,7 +77,7 @@ public class UserController {
                 .withRel("user addresses");
 
       AddressResponseDTO returnAddress = addressService.getUserAddressesByAddressId(userId,addressId);
-      return EntityModel.of(returnAddress, Arrays.asList(userlink,addressesLink)) ;
+      return EntityModel.of(returnAddress, Arrays.asList(userlink,addressesLink));
     }
 
     @GetMapping("/email-verification")
